@@ -33,4 +33,4 @@ services:
     container_nmae: cart
     depends_on:
     - redis
-    - catalogue
+    - catalogue 
