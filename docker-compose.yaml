@@ -19,6 +19,7 @@ services:
     depends_on:
     - catalogue
     - user
+    - cart
   redis:
     image: redis
   user:
@@ -27,3 +28,9 @@ services:
     depends_on:
     - catalogue
     - redis
+  cart:
+    image: cart:v1
+    container_nmae: cart
+    depends_on:
+    - redis
+    - catalogue
