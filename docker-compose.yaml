@@ -15,8 +15,8 @@ service:
     image: web:v1
     container_name: web
     depends_on:
-      - catalogue
-      - user
+    - catalogue
+    - user
   redis:
     image: redis
   user:
