@@ -4,23 +4,23 @@ networks:
     driver: bridge
 service:
   mongodb:
-    image:mongodb:v1
-    container_name:mongodb
+    image: mongodb:v1
+    container_name: mongodb
   container:
-    image:catalogue:v1
-    container_name:catalogue
+    image: catalogue:v1
+    container_name: catalogue
     depends_on:
     -mongodb
   web:
-    image:web:v1
-    container_name:web
+    image: web:v1
+    container_name: web
     depends_on:
     -catalogue
   redis:
-    image:redis
+    image: redis
   user:
-    image:user:v1
-    container_name:user
+    image: user:v1
+    container_name: user
     depends_on:
     -mongodb
     -redis 
