@@ -52,4 +52,3 @@ services:
     container_name: payment
     depends_on:
     - rabbitmq
-  
